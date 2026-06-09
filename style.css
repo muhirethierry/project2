@@ -1,0 +1,50 @@
+body {
+    background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80")
+    no-repeat center center;
+    background-size: cover;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accordion{
+    width:65%;
+   min-height:300px;
+    background-color:white;
+    padding:30px;
+    border-radius:30px;
+}
+.accordion .accordion-title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;}
+    .accordion .content-container .question {
+        padding: 20px 0px;
+        font-size: 22px;
+        cursor: pointer;
+        border-bottom: 1px solid #000;
+        position: relative;
+    }
+.accordion .content-container .question::after {
+    content: "+";
+    position: absolute;
+    right: -5px;
+    
+}
+
+.accordion .content-container .answer {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+.accordion .content-container.active .question{
+    font-size: 18px;
+    transition: .5s ;
+} 
+.accordion .content-container.active .question::after {
+    content: "-";
+    font-size: 30px;
+    transition: .5s;
+}
